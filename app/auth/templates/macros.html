@@ -1,0 +1,33 @@
+{% macro render_movie_dict(movies_obj) %}
+
+<table border="3">
+    <tr>
+        <th>Name</th>
+        <th>Duration</th>
+        <th>Comments</th>
+    </tr>
+
+    {% for movie,duration in movies_obj|dictsort(false, 'value',reverse=true) %}
+    <tr>
+        <td>{{movie|title}}</td>
+        <td>{{duration}}</td>
+        
+        {% if duration<=2%}
+
+        <td>Short</td>
+
+        {% elif duration<=3%}
+
+        <td>Medium</td>
+
+        {% else %}
+
+        <td>Long</td>
+
+        {% endif %}
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endmacro %}

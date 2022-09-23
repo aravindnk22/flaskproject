@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-flaskproject
+
 =======
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -130,4 +130,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+flaskproject/
+
 >>>>>>> c1388299372ff0f0c50109913bd9835088bd3a3a
